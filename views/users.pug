@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    div.container
+        h1 List Users
+        div.row
+            form.form-inline(action='/users', method='post')
+                div.form-group
+                    input#name.form-control(type='text', name='firstname', placeholder='Firstname')
+                div.form-group
+                    input#lastname.form-control(type='text', name='lastname', placeholder='Lastname')
+                div.form-group
+                    input#email.form-control(type='email', name='email', placeholder='Email')
+                div.form-group
+                    input#tel.form-control(type='number', name='phone', placeholder='Phone')
+                    
+                button(type='submit', class='btn btn-primary') Send
+
+        div.row
+            if users.constructor != Array
+                h2= users.msg
+            else
+                table.table.table-hover
+                    thead
+                        tr
+                            th Firstname
+                            th Lastname
+                            th Phone
+                            th Email
+                            th
+                            th
+                    tbody
+                        each user in users
+                            tr 
+                                td= user.firstname
+                                td= user.lastname
+                                td= user.phone
+                                td= user.email
+                                td
+                                    button.btn.btn-warning(onclick='updateUser('+user.id+')') Update
+                                td  
+                                    button.btn.btn-danger(onclick='deleteUser('+user.id+')') Delete
