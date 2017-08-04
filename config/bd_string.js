@@ -1,7 +1,7 @@
 var StringConnection = {
-    host: 'localhost',
-    user: 'root',
-    password: 'admin',
-    database: 'curso'
+    host: 'quantumbit.mx',
+    user: 'ezquadmp_meetup',
+    password: 'hodor420',
+    database: 'ezquadmp_meetup'
 }
 module.exports = StringConnection;
