@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div.container
+        h1 List Users
+        div.row
+                form.form-inline(action='/users/update/'+user.id, method='post')
+                    div.form-group
+                        input#name.form-control(type='text', name='firstname', placeholder='Firstname', value=user.firstname)
+                    div.form-group
+                        input#lastname.form-control(type='text', name='lastname', placeholder='Lastname', value=user.lastname)
+                    div.form-group
+                        input#email.form-control(type='email', name='email', placeholder='Email', value=user.email)
+                    div.form-group
+                        input#tel.form-control(type='number', name='phone', placeholder='Phone', value=user.phone)
+                        
+                    button(type='submit', class='btn btn-primary') Send

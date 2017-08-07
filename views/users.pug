@@ -4,17 +4,17 @@ block content
     div.container
         h1 List Users
         div.row
-            form.form-inline(action='/users', method='post')
-                div.form-group
-                    input#name.form-control(type='text', name='firstname', placeholder='Firstname')
-                div.form-group
-                    input#lastname.form-control(type='text', name='lastname', placeholder='Lastname')
-                div.form-group
-                    input#email.form-control(type='email', name='email', placeholder='Email')
-                div.form-group
-                    input#tel.form-control(type='number', name='phone', placeholder='Phone')
-                    
-                button(type='submit', class='btn btn-primary') Send
+                form.form-inline(action='/users', method='post')
+                    div.form-group
+                        input#name.form-control(type='text', name='firstname', placeholder='Firstname')
+                    div.form-group
+                        input#lastname.form-control(type='text', name='lastname', placeholder='Lastname')
+                    div.form-group
+                        input#email.form-control(type='email', name='email', placeholder='Email')
+                    div.form-group
+                        input#tel.form-control(type='number', name='phone', placeholder='Phone')
+                        
+                    button(type='submit', class='btn btn-primary') Send
 
         div.row
             if users.constructor != Array
